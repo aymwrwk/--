@@ -26,12 +26,14 @@ body {
   
   .sidebar {
     float: left;
-    width: 20%;
-    background: #fddde6;
+    width: 30%;
+    background: #ffe4e6;
     padding: 10px;
+
   }
   
   .love-message {
+  
     text-align: center;
     border: 2px dotted pink;
     margin-bottom: 20px;
@@ -52,7 +54,7 @@ body {
   }
   
   .links a {
-    text-decoration: none;
+    text-decoration: underline;
     color: #ff69b4;
     font-weight: bold;
   }

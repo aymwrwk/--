@@ -1,0 +1,109 @@
+/* Geral */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #fff0f5;
+    color: #444;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2 {
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to bottom, #ffd1dc, #fff0f5);
+    border-bottom: 3px solid #ffc0cb;
+  }
+  
+  .header-content {
+    position: relative;
+  }
+  
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #ffc0cb;
+    margin-bottom: 10px;
+  }
+  
+  header h1 {
+    font-size: 26px;
+    color: #d2691e;
+  }
+  
+  .header-decoration {
+    height: 10px;
+    background: url('decoration.png') repeat-x center;
+    margin-top: 10px;
+  }
+  
+  /* Layout */
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .left-column, .center-column, .right-column {
+    width: 300px;
+    background: #fff;
+    padding: 15px;
+    border: 2px dashed #ffc0cb;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section-image, .center-image {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 8px;
+  }
+  
+  /* Listas */
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .todo-list li, .routine-list li, .song-list li {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  .pages-list li {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  
+  .todo-list input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  .song-list li {
+    font-style: italic;
+    color: #8b008b;
+  }
+  
+  /* Adicionando estilo às seções */
+  section h2 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ff69b4;
+    border-bottom: 1px solid #ffc0cb;
+    padding-bottom: 5px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  
