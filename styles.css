@@ -1,0 +1,74 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: #ffeef2 url('background-pattern.png');
+    color: #555;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 90%;
+    margin: auto;
+    border: 3px solid pink;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    background: #ffe4e6;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .header-image {
+    max-width: 100%;
+  }
+  
+  .sidebar {
+    float: left;
+    width: 20%;
+    background: #fddde6;
+    padding: 10px;
+  }
+  
+  .love-message {
+    text-align: center;
+    border: 2px dotted pink;
+    margin-bottom: 20px;
+  }
+  
+  .love-message img {
+    max-width: 100px;
+    border-radius: 50%;
+  }
+  
+  .links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .links li {
+    margin: 10px 0;
+  }
+  
+  .links a {
+    text-decoration: none;
+    color: #ff69b4;
+    font-weight: bold;
+  }
+  
+  .content {
+    float: right;
+    width: 75%;
+    padding: 20px;
+    background: #fff;
+  }
+  
+  .footer {
+    clear: both;
+    text-align: center;
+    padding: 10px;
+    background: #ffe4e6;
+    font-size: 0.8em;
+  }
+  
