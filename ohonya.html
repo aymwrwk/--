@@ -3,247 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>><</title>
+    <title>Profile Card</title>
     <style>
-        * {
+        body {
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+            background-color: #f3f3f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
-        body {
-            background: #ffe4e6;
-            color: #333;
-            line-height: 1.6;
+        .card {
+            width: 350px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            padding: 20px;
         }
 
-        header {
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 20px;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        .username {
+            display: inline-block;
+            background-color: #ffb6c1;
+            color: #fff;
+            font-size: 12px;
+            padding: 5px 10px;
+            border-radius: 20px;
             text-align: center;
-            margin: 20px 0;
+            margin: 0 auto 10px;
         }
 
-        header h1 {
-            font-size: 2em;
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 20px;
+            margin: 10px 0 5px;
+            color: #333;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 15px;
+        }
+
+        .section {
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #ffb6c1;
             margin-bottom: 5px;
         }
 
-        header p {
-            font-size: 1.2em;
-        }
-
-        .content {
-            display: flex;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            gap: 20px;
-        }
-
-        .sidebar {
-            width: 20%;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
-
-        .sidebar ul {
-            list-style: none;
-        }
-
-        .sidebar li {
-            margin-bottom: 10px;
-        }
-
-        .sidebar a {
-            text-decoration: none;
-            color: #333;
-            display: flex;
-            align-items: center;
-        }
-
-        .sidebar a:hover {
-            color: #ff69b4;
-        }
-
-        .main {
-            flex: 1;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
-
-        .currently-reading {
-            margin-bottom: 20px;
-        }
-
-        .currently-reading h2 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-        }
-
-        .gallery-item {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-            background: #fefefe;
-            text-align: center;
-            padding: 10px;
-            position: relative;
-        }
-
-        .gallery-item img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .gallery-item h3 {
-            font-size: 1em;
-            margin-top: 10px;
-        }
-
-        .gallery-item p {
-            font-size: 0.9em;
+        .section-content {
+            font-size: 13px;
             color: #555;
+            line-height: 1.4;
         }
 
-        .delete-button {
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            background: red;
-            color: white;
-            border: none;
-            border-radius: 3px;
-            padding: 5px;
+        .footer-icons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .footer-icons img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.2s;
             cursor: pointer;
         }
 
-        .delete-button:hover {
-            background: darkred;
-        }
-
-        .upload-container {
-            font-size: 1.7em;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .custom-upload {
-            width: 25%;
-            display: inline-block;
-            background-color: pink;
-            color: white;
-            font-weight: bolder;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-        }
-
-        .custom-upload:hover {
-            background-color: palevioletred;
-        }
-
-        #image-upload {
-            display: none;
+        .footer-icons img:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
 <body>
-    <header>
-      
-        <p>2024 Library + Reading List!</p>
-    </header>
+    <div class="card">
+        <div class="card-header">
+            <span>&larr;</span>
+            <span>&#8635;</span>
+        </div>
 
-    <div class="content">
-      
-        <main class="main">
-            <section class="currently-reading">
-                <h2 style="color: #333; font-size: 1.4em;"></h2>
-                
-            </section>
+        <span class="username">user.cardd.co</span>
 
-            <div class="upload-container">
-                <label class="custom-upload" for="image-upload">+</label>
-                <input type="file" id="image-upload" accept="image/*">
+        <img src="" alt="Profile Picture" class="profile-img">
+
+        <h2>Savvi !</h2>
+        <p class="subtitle">15, white, english/french (learning)</p>
+
+        <div class="section">
+            <div class="section-title">DNI!</div>
+            <div class="section-content">
+                boring, pedos, creeps, basic dni
             </div>
+        </div>
 
-            <section class="gallery" id="gallery">
-                <!-- Images will be dynamically loaded here -->
-            </section>
-        </main>
+        <div class="section">
+            <div class="section-title">INTERACT!</div>
+            <div class="section-content">
+                acnh fans, likes cats, funny, sanrio fans, ddlc fans
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">YES!</div>
+            <div class="section-content">
+                sanrio, pink, cats, sweet things, art, games, spicy food, spirits
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">NO!</div>
+            <div class="section-content">
+                chocolate, maths, dreamsmp, pickles, hot weather
+            </div>
+        </div>
+
+        <div class="footer-icons">
+            <img src="img/hellokitty.gif">
+            <img src="img/hellokitty2.gif">
+            <img src="img/hellokitty3.gif">
+        </div>
     </div>
-  <!--
-    <script>
-        const imageUpload = document.getElementById('image-upload');
-        const gallery = document.getElementById('gallery');
-
-        // Load saved images from LocalStorage
-        function loadImages() {
-            const savedImages = JSON.parse(localStorage.getItem('galleryImages')) || [];
-            savedImages.forEach(imageSrc => {
-                addImageToGallery(imageSrc);
-            });
-        }
-
-        // Save images to LocalStorage
-        function saveImage(imageSrc) {
-            const savedImages = JSON.parse(localStorage.getItem('galleryImages')) || [];
-            savedImages.push(imageSrc);
-            localStorage.setItem('galleryImages', JSON.stringify(savedImages));
-        }
-
-        // Delete image from LocalStorage
-        function deleteImage(imageSrc) {
-            const savedImages = JSON.parse(localStorage.getItem('galleryImages')) || [];
-            const updatedImages = savedImages.filter(src => src !== imageSrc);
-            localStorage.setItem('galleryImages', JSON.stringify(updatedImages));
-        }
-
-        // Add an image to the gallery
-        function addImageToGallery(imageSrc) {
-            const newImage = document.createElement('div');
-            newImage.classList.add('gallery-item');
-            newImage.innerHTML = `
-                <img src="${imageSrc}" alt="Uploaded Image">
-                <h3>New Image</h3>
-                <button class="delete-button">Delete</button>
-            `;
-
-            const deleteButton = newImage.querySelector('.delete-button');
-            deleteButton.addEventListener('click', () => {
-                newImage.remove();
-                deleteImage(imageSrc);
-            });
-
-            gallery.appendChild(newImage);
-        }
-
-        // Handle image upload
-        imageUpload.addEventListener('change', (event) => {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = (e) => {
-                    const imageSrc = e.target.result;
-                    addImageToGallery(imageSrc);
-                    saveImage(imageSrc);
-                };
-                reader.readAsDataURL(file);
-            }
-        });
-
-        // Initialize gallery on page load
-        document.addEventListener('DOMContentLoaded', loadImages);
-    </script>-->
 </body>
 </html>
