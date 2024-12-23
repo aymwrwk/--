@@ -6,6 +6,10 @@ body {
     padding: 0;
   }
   
+  span{
+    color: #fcafe8;
+  }
+
   .container {
     width: 90%;
     margin: auto;
@@ -41,7 +45,7 @@ body {
   
   .love-message img {
     max-width: 100px;
-    border-radius: 50%;
+    border-radius: 0%;
   }
   
   .links ul {
@@ -50,12 +54,13 @@ body {
   }
   
   .links li {
-    margin: 10px 0;
+    text-align: center;
+    margin: 20px 0px;
   }
   
   .links a {
     text-decoration: underline;
-    color: #ff69b4;
+    color: #555;
     font-weight: bold;
   }
   
