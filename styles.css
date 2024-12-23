@@ -1,5 +1,12 @@
+
+.amarante-regular {
+  font-family: "Amarante", serif;
+
+}
+
+
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: "Amarante", serif;
     background: #ffeef2 url('background-pattern.png');
     color: #555;
     margin: 0;
