@@ -47,11 +47,20 @@ body {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding: 20px;
+ 
     gap: 20px;
   }
   
-  .left-column, .center-column, .right-column {
+
+  .left-column{
+    width: 100vw;
+    background: #fff;    
+    height: 40vh;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+
+ .center-column, .right-column {
     width: 300px;
     background: #fff;
     padding: 15px;
