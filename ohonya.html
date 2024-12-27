@@ -8,7 +8,7 @@
   <style>
 /* styles.css */
 body {
- font-family: Arial, Helvetica, sans-serif;
+    font-family: "Amarante", serif;
   color: #333;
   background-color: #fef9f6;
   margin: 0;
@@ -54,7 +54,7 @@ section {
   position: absolute;
   top: 10%;
   border-bottom: 1px solid #f3d9d1;
-
+width: 100vw;
   margin-bottom: 40px;
 }
 
@@ -115,7 +115,180 @@ section {
 border-radius: 5px;
 }
 
+/*segunda*/
 
+
+.amarante-regular {
+  font-family: "Amarante", serif;
+
+}
+
+.conteudo {
+  text-align: right;
+}
+
+.conteudomain {
+  text-align: justify;
+  right: 40px;
+  position: absolute;
+  width: 50%;
+  padding: 20px;
+}
+
+
+  
+  span{
+    color: #fcafe8;
+  }
+
+  .container {
+    width: 90%;
+    margin: auto;
+    border: 3px solid pink;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .header2 {
+    background: #f9ece6;
+    text-align: center;
+    padding: 20px;
+  }
+  
+
+  
+  .sidebar {
+    float: left;
+    width: 30%; /* Ajuste conforme necessário */
+    background: #f9ece6;
+    padding: 10px;
+    box-sizing: border-box; /* Inclui padding na largura total */
+  }
+  
+  .love-message {
+  
+    text-align: center;
+    border: 2px dotted pink;
+    margin-bottom: 20px;
+  }
+  
+  .love-message img {
+    max-width: 70px;
+    border-radius: 0%;
+  }
+  
+  .links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .links li {
+    text-align: center;
+    margin: 20px 0px;
+  }
+  
+  .links a {
+    text-decoration: underline;
+    color: #555;
+    font-weight: bold;
+  }
+  
+  .content {
+    float: right;
+    width: 75%;
+    padding: 20px;
+    background: #fff;
+  }
+  
+
+  /*terceira*/
+
+  /* Divisor decorativo */
+.divider {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.lace-divider {
+  width: 100%;
+  height: auto;
+}
+
+/* Layout principal */
+main {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.section {
+  width: 30%;
+  text-align: center;
+}
+
+.navigation h2, .todo-list h2, .right-panel h2 {
+  font-size: 18px;
+  color: #d63384;
+  margin-bottom: 10px;
+}
+
+/* Navegação */
+.navigation ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+.navigation ul li {
+  margin: 5px 0;
+}
+
+.plushie-img {
+  margin-top: 10px;
+  width: 80px;
+  height: auto;
+}
+
+/* Lista de tarefas */
+.todo-card {
+  background-color: #fffaf0;
+  border: 2px dashed #d63384;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.bunny-card {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.todo-list ul {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+/* Painel direito */
+.right-panel p {
+  font-size: 14px;
+  color: #d63384;
+}
+
+.right-panel ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.right-panel ul li {
+  margin: 5px 0;
+}
   </style>
 
 </head>
@@ -162,16 +335,69 @@ border-radius: 5px;
     </ul>
   </section>
 
-  <section class="school">
-    <h2>🎀</h2>
-    <p class="quote">who cares if i’m pretty if i fail my finals. °✧</p>
-    <ul class="school-tasks">
-      <li> ♡𓂃⋆ Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus minima fugit in iste magni accusantium beatae. Beatae ipsam ducimus maxime aperiam aut commodi, corporis laudantium.♡𓂃⋆
-      </li>
-      <li>homework</li>
-   
-    </ul>
-  </section>
+  <div class="container">
+    <header class="header2">
+    
+     
+    </header>
+    <aside class="sidebar">
+      <div class="love-message">
+        <p style="font-weight: bolder; color: rgb(247, 69, 14);">Clique nos Links!</p>
+        
+        <img src="img/hellokitty.gif" alt="Cute avatar">
+      </div>
+      <nav class="links">
+        <ul>
+          <li><a href="nhac.html"><span>Exemplo</span> (˶ˆᗜˆ˵)</a></li>
+          <li><a href="ohonya.html"><span>Exemplo </span>(˶˃⤙˂˶)</a></li>
+        
+        </ul>
+      </nav>
+    </aside>
+<div class="conteudomain">
+  
+      <div class="conteudo">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi maiores inventore consequuntur repellat omnis.
+        </p>
+        <h2>Lorem ipsum dolor</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi maiores inventore consequuntur.
+        </p>
+      </div>
+</div>
+
+
+    
+  </div>
+
+  <div class="divider">
+    <img src="img/nia.jpg" alt="Lace Divider" class="lace-divider">
+  </div>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <section class="navigation">
+      <h2>✧°｡⋆ ⋆｡°✧</h2>
+      <ul>
+        <li>♡ Journal</li>
+        <li>♡ Workout and yoga</li>
+        <li>♡ Read & learn</li>
+        <li>♡ Atomic Habits</li>
+        <li>♡ Budget Tracker</li>
+      </ul>
+      <img src="img/hellokitty.gif" alt="Frog Plushie" class="plushie-img">
+    </section>
+
+
+    <section class="right-panel">
+      
+      <p>1w 23d 2h 17m 13s love</p>
+      <ul>
+        <li>♡ morning routine</li>
+        <li>♡ my 2023 ♡</li>
+      </ul>
+      <img src="img/hellokitty.gif" alt="Bear Plushie" class="plushie-img">
+    </section>
+  </main>
 
 </body>
 </html>
