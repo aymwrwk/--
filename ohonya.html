@@ -1,160 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Card</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #FFE4E6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinnamon Girl</title>
 
-        .card {
-            border: 3px dashed pink;
-            width: 350px;
-            background-color: #ffffff;
-            border-radius: 0px 0px 0px 0px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            position: relative;
-            padding: 40px;
-        }
+  <style>
+/* styles.css */
+body {
+ font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  background-color: #fef9f6;
+  margin: 0;
+  padding: 0;
+}
 
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 20px;
-            color: #999;
-            margin-bottom: 10px;
-        }
+header {
+  text-align: center;
+  background-color: #f9ece6;
+  padding: 20px;
+  position: relative;
+}
 
-        .username {
-            display: inline-block;
-            background-color: #ffb6c1;
-            color: #fff;
-            font-size: 12px;
-            padding: 5px 10px;
-            border-radius: 20px;
-            text-align: center;
-            margin: 0 auto 10px;
-        }
+header h1 {
+    margin-left: 75px;
+  font-size: 36px;
+  font-weight: normal;
+  color: #333;
+  font-style: italic;
+}
 
-        .profile-img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            display: block;
-            margin: 0 auto;
-            transition: transform 0.2s;
-            cursor: pointer;
-        }
+.bow-img {
+  width: 50px;
+  margin-top: 10px;
+}
 
-        .profile-img:hover{
-            transform: scale(1.2);
-        }
+.bunny-img {
+ height: 130px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 90px;
+}
 
-        h2 {
-            text-align: center;
-            font-size: 20px;
-            margin: 10px 0 5px;
-            color: #333;
-        }
+section {
+  margin: 20px auto;
+  padding: 10px;
+  max-width: 600px;
+  text-align: center;
+}
 
-        .subtitle {
-            text-align: center;
-            font-size: 13px;
-            color: #888;
-            margin-bottom: 15px;
-        }
+.home, .school {
+  background-color: #fff;
+  border: 3px solid #f3d9d170;
+ 
+  padding: 20px;
+  margin-bottom: 20px;
+}
 
-        .section {
-            margin-bottom: 15px;
-        }
+.home h2, .school h2 {
+    text-align: left;
+  font-size: 22px;
+  font-weight: bolder;
+  color: #333;
+ 
+}
 
-        .section-title {
-            font-size: 14px;
-            font-weight: bold;
-            color: #ffb6c1;
-            margin-bottom: 5px;
-        }
+.quote {
+  font-style: italic;
+  color: #555;
+  margin-top: 10px;
+}
 
-        .section-content {
-            font-size: 13px;
-            color: #555;
-            line-height: 1.4;
-        }
+.school-tasks {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
 
-        .footer-icons {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
+.school-tasks li {
+  background-color: #fef8f4;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #f3d9d1;
+ 
+  font-size: 16px;
+  text-align: left;
+}
 
-        .footer-icons img {
-            width: 50px;
-            height: 50px;
-            object-fit: cover;
-            border-radius: 10px;
-            transition: transform 0.2s;
-            cursor: pointer;
-        }
+.bottom-image {
+  text-align: center;
+  margin-top: 20px;
+}
 
-        .footer-icons img:hover {
-            transform: scale(2.1);
-        }
-    </style>
+.background-img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+  </style>
+
 </head>
 <body>
-    <div class="card">
+  <!-- Cabeçalho -->
+  <header>
+    <div class="header-content">
+      <h1>Cinnamon Girl</h1>
     
-
-        <img src="img/coelhinho.jpg" alt="Profile Picture" class="profile-img">
-
-        <h2>Savvi !</h2>
-        <p class="subtitle">15, white, english/french (learning)</p>
-
-        <div class="section">
-            <div class="section-title">DNI!</div>
-            <div class="section-content">
-                boring, pedos, creeps, basic dni
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="section-title">INTERACT!</div>
-            <div class="section-content">
-                acnh fans, likes cats, funny, sanrio fans, ddlc fans
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="section-title">YES!</div>
-            <div class="section-content">
-                sanrio, pink, cats, sweet things, art, games, spicy food, spirits
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="section-title">NO!</div>
-            <div class="section-content">
-                chocolate, maths, dreamsmp, pickles, hot weather
-            </div>
-        </div>
-
-        <div class="footer-icons">
-            <img src="img/hellokitty.gif">
-            <img src="img/hellokitty2.gif">
-            <img src="img/hellokitty3.gif">
-        </div>
     </div>
+    <img src="img/74bf7eb4ce39d24beb400c60399affd2.jpg" alt="Bunny Plushie" class="bunny-img">
+  </header>
+
+  <!-- Seção Home -->
+  <section class="home">
+    <h2>Home 🌷</h2>
+    <p class="quote">if you never bleed you’re never gonna grow. ♡𓂃⋆</p>
+  </section>
+
+  <!-- Seção School -->
+  <section class="school">
+    <h2>school🎀</h2>
+    <p class="quote">who cares if i’m pretty if i fail my finals. °✧</p>
+    <ul class="school-tasks">
+      <li>revision</li>
+      <li>homework</li>
+      <li>timetable</li>
+    </ul>
+  </section>
+
+  <!-- Imagem inferior -->
+  <section class="bottom-image">
+    <img src="img/nos.jpg" alt="Soft Fabric" class="background-img">
+  </section>
 </body>
 </html>
