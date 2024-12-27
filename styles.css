@@ -18,7 +18,7 @@
 
 body {
   font-family: "Amarante", serif;
-    background: #ffeef2 url('background-pattern.png');
+    background: #fef9f6 url('background-pattern.png');
     color: #555;
     margin: 0;
     padding: 0;
@@ -43,7 +43,7 @@ body {
   }
 
   .header {
-    background: #ffe4e6;
+    background: #f9ece6;
     text-align: center;
     padding: 20px;
   }
@@ -53,7 +53,7 @@ body {
   .sidebar {
     float: left;
     width: 30%; /* Ajuste conforme necessário */
-    background: #ffe4e6;
+    background: #f9ece6;
     padding: 10px;
     box-sizing: border-box; /* Inclui padding na largura total */
   }
@@ -97,7 +97,7 @@ body {
     clear: both;
     text-align: center;
     padding: 10px;
-    background: #ffe4e6;
+    background: #f9ece6;
     font-size: 0.8em;
   }
   
