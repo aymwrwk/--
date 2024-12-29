@@ -1,57 +1,150 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Celine's Blog</title>
-  <link rel="stylesheet" href="styles.css">
- 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Amatic+SC:wght@400;700&family=Chokokutai&family=Delius&family=Henny+Penny&family=Outfit:wght@100..900&family=Parisienne&family=Parkinsans:wght@300..800&family=Pinyon+Script&family=Quicksand:wght@300..700&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <style>
+       
+        .profile-container {
+            max-width: 700px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: 5px solid #ffe6f0;
+        }
 
+        .header3 {
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ffc0cb;
+            position: relative;
+        }
 
+        .header3 img.profile-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid #ffc0cb;
+        }
 
+        .header3 img.decor {
+            position: absolute;
+            top: -20px;
+            right: 10px;
+            width: 100px;
+        }
+
+        .header3 h1 {
+            font-size: 22px;
+            color: #ff88aa;
+            margin: 10px 0;
+        }
+
+        .header3 p {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .section3 {
+            margin-top: 20px;
+        }
+
+        .section-title {
+            font-size: 14px;
+            color: #ff88aa;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .about-me, .discord-info, .game-info {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.6;
+            background: #fff0f5;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px dashed #ffc0cb;
+        }
+
+        .game-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .game-info img {
+            width: 60px;
+            height: 60px;
+            margin-right: 10px;
+        }
+
+        .cta-button {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            padding: 12px;
+            background: #ff88aa;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #ff5588;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .divider3 {
+            border: 0;
+            height: 1px;
+            background: #ffc0cb;
+            margin: 15px 0;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <header class="header">
-    
-     
-    </header>
-    <aside class="sidebar">
-      <div class="love-message">
-        <p style="font-weight: bolder; color: rgb(247, 69, 14);">Clique nos Links!</p>
-        
-        <img src="img/hellokitty.gif" alt="Cute avatar">
-      </div>
-      <nav class="links">
-        <ul>
-          <li><a href="nhac.html"><span>Exemplo</span> (˶ˆᗜˆ˵)</a></li>
-          <li><a href="ohonya.html"><span>Exemplo </span>(˶˃⤙˂˶)</a></li>
-        
-        </ul>
-      </nav>
-    </aside>
-<div class="conteudomain">
-  
-      <div class="conteudo">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi maiores inventore consequuntur repellat omnis.
-        </p>
-        <h2>Lorem ipsum dolor</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi maiores inventore consequuntur.
-        </p>
-      </div>
-</div>
+    <div class="profile-container">
+        <div class="header3">
+      
+            <img src="img/hellokitty.gif" alt="Decorative Element" class="decor">
+            <h1>Ivory</h1>
+            <p>✦ mw my wife!!! ✦</p>
+        </div>
 
-    <main class="content">
-      <h2>Welcome to SWIRL!</h2>
-      <p>Would you like some tea?</p>
-      <p>This is my internet blog, my digital garden blooming...</p>
-    </main>
-    <footer class="footer">
-      <p>Lorem ipsum, dolor sit amet consectetur</p>
-    </footer>
-  </div>
+        <hr class="divider3">
+
+        <div class="section3">
+            <div class="section-title">About Me</div>
+            <div class="about-me">
+                ✦ He, They <br>
+                ✦ Loving every moment ✦
+            </div>
+        </div>
+
+        <div class="section3">
+            <div class="section-title">Discord Member Since</div>
+            <div class="discord-info">Nov 5, 2020</div>
+        </div>
+
+        <div class="section3">
+            <div class="section-title">Playing a Game</div>
+            <div class="game-info">
+                <img src="img/hellokitty3.gif" alt="Game Thumbnail">
+                <div>
+                    ✦ I've grown into a tall child <br>
+                    ✦ 19:55:09 elapsed
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="cta-button">daily click 4 palestine</a>
+    </div>
 </body>
 </html>

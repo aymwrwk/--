@@ -218,86 +218,110 @@ border-radius: 5px;
 
   /*terceira*/
 
-  /* Divisor decorativo */
-.divider {
-  text-align: center;
-  margin: 50px 0;
-}
+  .profile-container {
+            max-width: 700px;
+            margin: 20px auto;
+            background: #fff;
+          
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: 5px solid #ffe6f0;
+        }
 
-.lace-divider {
-  width: 100%;
-  height: auto;
-}
+        .header3 {
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ffc0cb;
+            position: relative;
+        }
 
-/* Layout principal */
-main {
-  display: flex;
-  justify-content: space-around;
- 
-}
+        .header3 img.profile-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid #ffc0cb;
+        }
 
-.section {
-  width: 30%;
-  text-align: center;
-}
+        .header3 img.decor {
+            position: absolute;
+            top: -20px;
+            right: 10px;
+            width: 100px;
+        }
 
-.navigation h2, .todo-list h2, .right-panel h2 {
-  font-size: 18px;
-  color: #d63384;
-  margin-bottom: 10px;
-}
+        .header3 h1 {
+            font-size: 22px;
+            color: #ff88aa;
+            margin: 10px 0;
+        }
 
-/* Navegação */
-.navigation ul {
-  list-style-type: none;
-  padding: 0;
-  font-size: 14px;
-}
+        .header3 p {
+            font-size: 12px;
+            color: #888;
+        }
 
-.navigation ul li {
-  margin: 5px 0;
-}
+        .section3 {
+            margin-top: 20px;
+        }
 
-.plushie-img {
-  margin-top: 10px;
-  width: 80px;
-  height: auto;
-}
+        .section-title {
+            font-size: 14px;
+            color: #ff88aa;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
 
-/* Lista de tarefas */
-.todo-card {
-  background-color: #fffaf0;
-  border: 2px dashed #d63384;
-  border-radius: 10px;
-  padding: 15px;
-  margin-top: 10px;
-}
+        .about-me, .discord-info, .game-info {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.6;
+            background: #fff0f5;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px dashed #ffc0cb;
+        }
 
-.bunny-card {
-  width: 50px;
-  margin-bottom: 10px;
-}
+        .game-info {
+            display: flex;
+            align-items: center;
+        }
 
-.todo-list ul {
-  list-style: none;
-  padding: 0;
-  font-size: 14px;
-}
+        .game-info img {
+            width: 60px;
+            height: 60px;
+            margin-right: 10px;
+        }
 
-/* Painel direito */
-.right-panel p {
-  font-size: 14px;
-  color: #d63384;
-}
+        .cta-button {
+          
+          font-family: Arial, Helvetica, sans-serif;
+          text-transform: uppercase;
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            padding: 12px;
+            background: #ff88aa;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
 
-.right-panel ul {
-  list-style-type: none;
-  padding: 0;
-}
+        .cta-button:hover {
+            background: #ff5588;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
 
-.right-panel ul li {
-  margin: 5px 0;
-}
+        .divider3 {
+            border: 0;
+            height: 1px;
+            background: #ffc0cb;
+            margin: 15px 0;
+        }
   </style>
 
 </head>
@@ -377,36 +401,42 @@ main {
 
     
   </div>
+  <div class="profile-container">
+    <div class="header3">
+  
+        <img src="img/hellokitty.gif" alt="Decorative Element" class="decor">
+        <h1>Ivory</h1>
+        <p>✦ mw my wife!!! ✦</p>
+    </div>
 
-  <div class="divider">
-    <img src="img/nia.jpg" alt="Lace Divider" class="lace-divider">
-  </div>
+    <hr class="divider3">
 
-  <!-- Conteúdo principal -->
-  <main>
-    <section class="navigation">
-      <h2>✧°｡⋆ ⋆｡°✧</h2>
-      <ul>
-        <li>♡ Journal</li>
-        <li>♡ Workout and yoga</li>
-        <li>♡ Read & learn</li>
-        <li>♡ Atomic Habits</li>
-        <li>♡ Budget Tracker</li>
-      </ul>
-      <img src="img/hellokitty.gif" alt="Frog Plushie" class="plushie-img">
-    </section>
+    <div class="section3">
+        <div class="section-title">About Me</div>
+        <div class="about-me">
+            ✦ He, They <br>
+            ✦ Loving every moment ✦
+        </div>
+    </div>
 
+    <div class="section3">
+        <div class="section-title">Discord Member Since</div>
+        <div class="discord-info">Nov 5, 2020</div>
+    </div>
 
-    <section class="right-panel">
-      
-      <p>1w 23d 2h 17m 13s love</p>
-      <ul>
-        <li>♡ morning routine</li>
-        <li>♡ my 2023 ♡</li>
-      </ul>
-      <img src="img/hellokitty.gif" alt="Bear Plushie" class="plushie-img">
-    </section>
-  </main>
+    <div class="section3">
+        <div class="section-title">Playing a Game</div>
+        <div class="game-info">
+            <img src="img/hellokitty3.gif" alt="Game Thumbnail">
+            <div>
+                ✦ I've grown into a tall child <br>
+                ✦ 19:55:09 elapsed
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="cta-button">Voltar ao topo</a>
+</div>
 
 </body>
 </html>
