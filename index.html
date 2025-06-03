@@ -1,170 +1,255 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
-
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>73</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalhes (Mobile)</title>
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+  
+  <style>
+    .material-icons {
+      font-family: 'Material Icons';
+    }
+
+    .span1{
+      background-color: rgb(155, 155, 155);
+      padding: 4px;
+    }
+  </style>
 </head>
+<body class="bg-neutral-50 flex flex-col min-h-screen">
 
-<style>
-  * {
-    cursor: url('https://cur.cursors-4u.net/cursors/cur-9/cur839.cur'), auto;
-  }
-
-  body {
-    font-family: 'Press Start 2P', monospace;
-    background-image: url(./img/wha.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-  }
-
-  .texto-normal {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
-  .texto-normal2 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-  }
-
-  li {
-    font-size: 10px;
-  }
-
-  .custom-text {
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    font-size: 17px;
-    font-weight: bolder;
-  }
-
-  span {
-    background-color: white;
-    color: black;
-    text-transform: uppercase;
-  }
-</style>
-
-<body class="text-white pt-16 p-3">
-
-  <!-- Header fixo -->
-  <header class="fixed top-0 left-0 w-full bg-black/100 backdrop-blur-sm text-white z-50">
-    <div class="flex items-center justify-center max-w-7xl mx-auto px-6 py-3 gap-8">
- 
-     
-
-      <!-- Botão tema -->
-      <button id="theme-toggle" class="hover:opacity-70 transition">
-        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" class="text-white h-6 w-6 hidden" fill="none"
-          viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" />
-        </svg>
-        <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-          viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M12 3v2m0 14v2m9-9h2m-18 0H3m15.364-6.364l1.414 1.414M4.222 19.778l1.414-1.414M19.778 19.778l-1.414-1.414M4.222 4.222l1.414 1.414M12 8a4 4 0 100 8 4 4 0 000-8z" />
-        </svg>
+  <!-- ====================
+       HEADER
+       ==================== -->
+  <header id="header" class="flex items-center px-4 py-3 bg-white border-b">
+    <h1 class="flex-1 text-center text-neutral-800 font-semibold"></h1>
+    <div class="flex gap-2">
+      <button id="salvoid" onclick="salvo()" class="p-2 text-neutral-600 hover:bg-neutral-100 rounded-full">
+        <span class="material-icons">bookmark_border</span>
       </button>
+      
     </div>
   </header>
-<main class="flex justify-center items-start mt-6 mb-12 px-4">
-  <div class="w-full max-w-md bg-white border-4 border-pink-300 rounded-2xl p-4 shadow-lg space-y-4">
-    
-    <!-- PRIMEIRA DIV (container principal) -->
-    <div class="bg-pink-100 border border-pink-300 rounded-xl p-2 flex flex-col items-center space-y-1">
-      <h1 class="text-lg font-bold text-pink-600">Welcome to Deans Space!</h1>
-      <p class="text-[10px] text-pink-400">by skrilmto and xiu.carrd.co</p>
-    </div>
 
-    <!-- IMAGEM GRANDE ABAIXO DA PRIMEIRA DIV -->
-    <div class="mt-4">
-      <img src="./img/big-banner.png" alt="Banner maior" class="w-full rounded-xl border-2 border-pink-200" />
-    </div>
+  <!-- ====================
+       MAIN CONTENT
+       ==================== -->
+  <main class="flex-1 overflow-auto px-4 pb-24 bg-neutral-50">
+    <div id="mensagemSalvo" class="hidden mt-6 flex items-center gap-3 bg-neutral-100 border border-neutral-200 rounded-xl p-4">
+  <span class="material-icons text-neutral-500">info</span>
+  <p class="text-sm text-neutral-700">Nenhum item salvo no momento.</p>
+</div>
 
-    <!-- Abas de navegação -->
-    <nav class="flex justify-center bg-pink-50 border border-pink-200 rounded-full py-1 space-x-2 text-[12px]">
-      <a href="#" class="px-3 py-1 bg-pink-200 text-pink-700 rounded-full font-semibold">Home</a>
-      <a href="#" class="px-3 py-1 text-pink-600 rounded-full hover:bg-pink-100">Abt me</a>
-      <a href="#" class="px-3 py-1 text-pink-600 rounded-full hover:bg-pink-100">Comms</a>
-      <a href="#" class="px-3 py-1 text-pink-600 rounded-full hover:bg-pink-100">My Art</a>
-    </nav>
-
-    <!-- Barra de link principal -->
-    <div class="flex items-center bg-pink-50 border border-pink-200 rounded-full px-3 py-2 space-x-2">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-      <span class="flex-1 text-pink-600 text-xs truncate">https://deanzief.oarrd.co</span>
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
-        <path d="M3 10a7 7 0 0114 0 7 7 0 01-14 0z" />
-      </svg>
-    </div>
-
-    <!-- Ícones sociais -->
-    <div class="flex justify-center space-x-4 text-pink-500 text-[12px]">
-      <a href="#" class="hover:text-pink-700">twitter</a>
-      <a href="#" class="hover:text-pink-700">tiktok</a>
-      <a href="#" class="hover:text-pink-700">insta</a>
-      <a href="#" class="hover:text-pink-700">email</a>
-    </div>
-
-    <!-- Conteúdo principal: bio + emojis + imagem -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <!-- Coluna esquerda -->
-      <div class="space-y-1">
-        <p class="text-pink-600 font-bold text-sm">@Deanzief !!</p>
-        <p class="text-pink-500 text-[11px] leading-snug">
-          Hello there, my name is Dean! I go by
-          <span class="font-semibold text-pink-600">He/him</span> and I’m a Digital Artist, 3D artist and animator!
-        </p>
-        <!-- Linha de frutas -->
-        <div class="flex space-x-2 mt-2">
-          <img src="./img/roll.png" alt="roll cake" class="h-6 w-6 rounded-full" />
-          <img src="./img/strawberry.png" alt="strawberry" class="h-6 w-6 rounded-full" />
-          <img src="./img/cake.png" alt="cake slice" class="h-6 w-6 rounded-full" />
+    <!-- Card Principal -->
+    <div id="card-principal" class="bg-white rounded-xl shadow-sm p-4 flex gap-4 mt-4 mb-6">
+      <div class="w-24 h-24 bg-neutral-200 rounded-lg flex items-center justify-center">
+        <span class="material-icons text-neutral-400 text-4xl">image</span>
+      </div>
+      <div class="flex-1 flex flex-col justify-between">
+        <div>
+          <h2 class="text-xl font-semibold text-neutral-800">Headline</h2>
+          <p class="text-neutral-500 mt-1">supporting text</p>
         </div>
-      </div>
-      <!-- Coluna direita -->
-      <div class="flex justify-center">
-        <img src="./img/dean-art.png" alt="Dean Art Preview" class="rounded-xl border-2 border-pink-200" />
+        <button class="self-start mt-2 px-4 py-2 rounded-full bg-violet-600 hover:bg-violet-700 text-white text-sm font-medium">
+          <span class="material-icons text-base mr-1">file_download</span>
+          Download
+        </button>
       </div>
     </div>
 
-    <!-- Rodapé pequeno -->
-    <p class="text-center text-pink-300 text-[10px]">Made with Carrd</p>
+    <!-- Descrição -->
+    <div id="descricao">
+     
+        
+      </p>
+      <p class="text-sm text-neutral-700 mb-6 leading-relaxed ">
+   A manipulação de pessoas mentalmente frágeis, ingênuas ou pouco críticas ocorre quando alguém explora suas limitações emocionais ou intelectuais para influenciar decisões e comportamentos. Embora eticamente questionável, há situações em que esse processo se torna, de certo modo, uma ferramenta para que o próprio indivíduo enfrente as consequências de seus erros. Quando a consciência falha, a influência externa, mesmo forçada, acaba servindo como um meio indireto de correção e aprendizado.
+      </p>
+    </div>
+
+    <!-- Botão que abre a DIV fullscreen -->
+    <div id="openSection" class="flex items-center justify-between mb-4 cursor-pointer">
+      <h3 class="text-base font-medium text-neutral-800">Abrir Section Fullscreen</h3>
+      <button class="p-1 text-neutral-500 hover:text-neutral-700 rounded-full">
+        <span class="material-icons text-lg">chevron_right</span>
+      </button>
+    </div>
+
+    <!-- Lista de Itens -->
+    <div id="listaItens" class="space-y-3">
+      <!-- Item 1 -->
+      <div class="bg-white rounded-xl shadow-sm p-3 flex gap-3 items-center">
+        <div class="w-14 h-14 bg-neutral-200 rounded-lg flex items-center justify-center">
+          <span class="material-icons text-neutral-400 text-3xl">image</span>
+        </div>
+        <div class="flex-1">
+          <h4 class="text-sm font-medium text-neutral-800">Title</h4>
+          <p class="text-xs text-neutral-500 mt-1">Description.</p>
+          <div class="flex items-center text-xs text-neutral-400 mt-1">
+            <span class="material-icons text-xs mr-1">add</span>
+            <span>Today · 23 min</span>
+          </div>
+        </div>
+        <button class="p-2 text-neutral-500 hover:text-neutral-700 rounded-full">
+          <span class="material-icons text-lg">play_arrow</span>
+        </button>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="bg-white rounded-xl shadow-sm p-3 flex gap-3 items-center">
+        <div class="w-14 h-14 bg-neutral-200 rounded-lg flex items-center justify-center">
+          <span class="material-icons text-neutral-400 text-3xl">image</span>
+        </div>
+        <div class="flex-1">
+          <h4 class="text-sm font-medium text-neutral-800">Title</h4>
+          <p class="text-xs text-neutral-500 mt-1">Description.</p>
+          <div class="flex items-center text-xs text-neutral-400 mt-1">
+            <span class="material-icons text-xs mr-1">add</span>
+            <span>Today · 23 min</span>
+          </div>
+        </div>
+        <button class="p-2 text-neutral-500 hover:text-neutral-700 rounded-full">
+          <span class="material-icons text-lg">play_arrow</span>
+        </button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ====================
+       DIV FULLSCREEN OCULTA
+       ==================== -->
+  <div id="divFullscreen" class="fixed inset-0 bg-white z-50 hidden flex flex-col p-6 overflow-auto">
+      <div class="flex items-center mb-4">
+    <button id="closeSection" class="p-2 text-neutral-600 hover:bg-neutral-100 rounded-full">
+      <span class="material-icons">arrow_back</span>
+    </button>
   </div>
-</main>
+  
+<div>
+  <img src="midia/mie02.webp" alt="">
+</div>
+
+    <div id="listaItens" class="space-y-3">
+      <div class="bg-white rounded-xl shadow-sm p-3 flex gap-1 items-center">
+        <div class="p-8 flex items-center justify-center">
+ <span class=""><video class="w-full h-full " src="midia/mie1.mp4" loop controls alt=""></span>
+        </div>
+        <div class="flex-1">
+          <h4 class="text-sm font-medium text-neutral-800"></h4>
+          <p class="text-xs text-neutral-500 mt-1"></p>
+          <div class="flex items-center text-xs text-neutral-400 mt-1">
+            <span class="material-icons text-xs mr-1"></span>
+            <span>26s</span>
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- Item 2 -->
+      <div class="bg-white rounded-xl shadow-sm p-3 flex gap-1 items-center">
+        <div class="p-8 flex items-center justify-center">
+          <span class=""><video class="w-full h-full " src="midia/mie04.mp4" loop controls alt=""></span>
+        </div>
+        <div class="flex-1">
+          <h4 class="text-sm font-medium text-neutral-800"></h4>
+          <p class="text-xs text-neutral-500 mt-1"></p>
+          <div class="flex items-center text-xs text-neutral-400 mt-1">
+            <span class="material-icons text-xs mr-1"></span>
+            <span>8m 29s</span>
+          </div>
+        </div>
+        
+      </div>
+       <div class="bg-white rounded-xl shadow-sm p-3 flex gap-1 items-center">
+        <div class="p-8 flex items-center justify-center">
+          <span class=""><video class="w-full h-full " src="midia/mie05.mp4" loop controls alt=""></span>
+        </div>
+        <div class="flex-1">
+          <h4 class="text-sm font-medium text-neutral-800"></h4>
+          <p class="text-xs text-neutral-500 mt-1"></p>
+          <div class="flex items-center text-xs text-neutral-400 mt-1">
+            <span class="material-icons text-xs mr-1"></span>
+            <span>3m 45s</span>
+          </div>
+        </div>
+        
+      </div>
+  </div>
+
+  <!-- ====================
+       FOOTER PLAYER
+       ==================== -->
+  <footer class="fixed bottom-0 left-0 right-0 border-t bg-white p-3 flex items-center">
+    <div class="w-10 h-10 bg-neutral-200 rounded-lg flex items-center justify-center mr-3">
+      <img class="rounded-lg" src="img/capa.png" alt="">
+    </div>
+    <div class="flex-1">
+      <p class="text-sm text-neutral-800 leading-tight">бывает больно</p>
+      <p class="text-xs text-neutral-500">kurokov</p>
+    </div>
+    <button id="playBtn" class="p-2 text-neutral-500 hover:text-neutral-700 rounded-full">
+      <span class="material-icons text-lg">play_arrow</span>
+    </button>
+  </footer>
+
+  <!-- ====================
+       ÁUDIO
+       ==================== -->
+  <audio id="audioPlayer" src="img/Бывает больно.mp3"></audio>
+
+  <script>
+ function salvo() {
+  const mensagem = document.getElementById('mensagemSalvo');
+  mensagem.classList.remove('hidden');
+  
+  setTimeout(() => {
+    mensagem.classList.add('hidden');
+  }, 3000); // some após 3 segundos
+}
 
 
+    // ========= ÁUDIO =========
+    const audio = document.getElementById('audioPlayer');
+    const playBtn = document.getElementById('playBtn');
+    let isPlaying = false;
+
+    playBtn.addEventListener('click', () => {
+      if (!isPlaying) {
+        audio.play();
+        isPlaying = true;
+        playBtn.innerHTML = '<span class="material-icons text-lg">pause</span>';
+      } else {
+        audio.pause();
+        isPlaying = false;
+        playBtn.innerHTML = '<span class="material-icons text-lg">play_arrow</span>';
+      }
+    });
+
+    audio.addEventListener('ended', () => {
+      isPlaying = false;
+      playBtn.innerHTML = '<span class="material-icons text-lg">play_arrow</span>';
+    });
+
+    // ========= ABRIR E FECHAR DIV FULLSCREEN =========
+    const openBtn = document.getElementById('openSection');
+    const closeBtn = document.getElementById('closeSection');
+    const fullscreenDiv = document.getElementById('divFullscreen');
+
+    openBtn.addEventListener('click', () => {
+      fullscreenDiv.classList.remove('hidden');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      fullscreenDiv.classList.add('hidden');
+    });
+  </script>
 
 </body>
-
-<script>
-  const button = document.getElementById('theme-toggle');
-  const html = document.documentElement;
-  const iconSun = document.getElementById('icon-sun');
-  const iconMoon = document.getElementById('icon-moon');
-
-  button.addEventListener('click', () => {
-    html.classList.toggle('dark');
-    if (html.classList.contains('dark')) {
-      document.body.classList.add('bg-[#0a0a0a]', 'text-white');
-      document.body.classList.remove('bg-white', 'text-black');
-      iconSun.classList.remove('hidden');
-      iconMoon.classList.add('hidden');
-    } else {
-      document.body.classList.add('bg-white', 'text-black');
-      document.body.classList.remove('bg-[#0a0a0a]', 'text-white');
-      iconSun.classList.add('hidden');
-      iconMoon.classList.remove('hidden');
-    }
-  });
-</script>
 </html>
