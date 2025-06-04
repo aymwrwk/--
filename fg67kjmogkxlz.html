@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tattoo Gallery Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#2f2f2f] text-white font-sans">
+    <div class="max-w-7xl mx-auto px-2 py-4">
+      <!-- Top Menu -->
+      <div class="text-center mb-2">
+        <h1 class="text-4xl font-bold tracking-wider font-serif text-gray-100">Tattoo Gallery</h1>
+        <div class="flex justify-center gap-2 mt-2 text-xs font-semibold flex-wrap">
+          <button class="bg-[#1a1a1a] px-4 py-1 border border-gray-500 rounded uppercase">Tribal</button>
+          <button class="bg-yellow-400 text-black px-4 py-1 border border-gray-500 rounded uppercase shadow-inner">Black&amp;Gray</button>
+          <button class="bg-[#1a1a1a] px-4 py-1 border border-gray-500 rounded uppercase">Color</button>
+        </div>
+        <div class="flex justify-center gap-2 mt-1 text-sm font-bold">
+          <span class="text-yellow-300">I</span>
+          <span class="text-gray-200">II</span>
+          <span class="text-gray-200">III</span>
+          <span class="text-gray-200">IV</span>
+          <span class="text-gray-200">V</span>
+        </div>
+      </div>
+
+      <!-- Main Content with Side Thumbnails -->
+      <div class="flex flex-col lg:flex-row gap-4">
+        <!-- Main Image and Bottom Thumbnails -->
+        <div class="w-full lg:w-[75%]">
+          <img src="https://i.imgur.com/f1aEJwL.jpg" alt="Main Tattoo" class="w-full border border-gray-600" />
+
+          <!-- Bottom Thumbnails -->
+          <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2 mt-2">
+            <img src="https://i.imgur.com/O0d9qGe.jpg" class="border border-gray-700 w-full h-auto" />
+            <img src="https://i.imgur.com/JpYvZtF.jpg" class="border border-gray-700 w-full h-auto" />
+            <img src="https://i.imgur.com/V04HqMi.jpg" class="border border-gray-700 w-full h-auto" />
+            <img src="https://i.imgur.com/BHykPR1.jpg" class="border border-gray-700 w-full h-auto" />
+            <img src="https://i.imgur.com/yYbZKBl.jpg" class="border border-gray-700 w-full h-auto" />
+            <img src="https://i.imgur.com/Mlv4Apl.jpg" class="border border-gray-700 w-full h-auto" />
+          </div>
+        </div>
+
+        <!-- Right Thumbnails Grid -->
+        <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-2 gap-2 w-full lg:w-[25%]">
+          <img src="https://i.imgur.com/XyEIMRe.jpg" class="border border-gray-700 w-full h-auto" />
+          <img src="https://i.imgur.com/1D2A9Tx.jpg" class="border border-gray-700 w-full h-auto" />
+          <img src="https://i.imgur.com/v2a4kbz.jpg" class="border border-gray-700 w-full h-auto" />
+          <img src="https://i.imgur.com/CeclBho.jpg" class="border border-gray-700 w-full h-auto" />
+          <img src="https://i.imgur.com/FwUSJH6.jpg" class="border border-gray-700 w-full h-auto" />
+          <img src="https://i.imgur.com/vN2FKbs.jpg" class="border border-gray-700 w-full h-auto" />
+          <img src="https://i.imgur.com/KQvDHzW.jpg" class="border border-gray-700 w-full h-auto" />
+          <img src="https://i.imgur.com/ZoJwzAx.jpg" class="border border-gray-700 w-full h-auto" />
+        </div>
+      </div>
+
+      <!-- Bottom navigation -->
+      <div class="text-center mt-4 text-gray-300 text-sm tracking-wide">
+        <p>next</p>
+      </div>
+    </div>
+  </body>
+</html>

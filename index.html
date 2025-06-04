@@ -31,7 +31,7 @@
   <!-- ====================
        HEADER
        ==================== -->
-  <header class="flex items-center px-4 py-3 bg-white border-b">
+  <header class="flex items-center px-4 py-3 bg-white">
     <h1 class="flex-1 text-center text-neutral-800 font-semibold"></h1>
     <div class="flex gap-2">
       <button onclick="salvo()" class="p-2 text-neutral-600 hover:bg-neutral-100 rounded-full">
@@ -45,202 +45,304 @@
        ==================== -->
   <main class="flex-1 overflow-auto px-4 pb-24 bg-neutral-50">
 
-    <div id="mensagemSalvo" class="hidden mt-6 flex items-center gap-3 bg-neutral-100 border border-neutral-200 rounded-xl p-4">
+    <div id="mensagemSalvo" class=" hidden mt-6 flex items-center gap-3 bg-neutral-100 border border-neutral-200 rounded-xl p-4">
       <span class="material-icons text-neutral-500">info</span>
       <p class="text-sm text-neutral-700">Nenhum item salvo no momento.</p>
     </div>
 
     <!-- Card Principal -->
-    <div class="bg-white rounded-xl shadow-sm p-4 flex gap-4 mt-4 mb-6">
-      <div class="w-24 h-24 bg-neutral-200 rounded-lg flex items-center justify-center">
+    <div class="bg-white w-64 p-4 flex  ">
+      <div class="w-64 h-64 bg-neutral-200 flex items-center justify-center">
         <span class="material-icons text-neutral-400 text-4xl">image</span>
-      </div>
-      <div class="flex-1 flex flex-col justify-between">
-        <div>
-          <h2 class="text-xl font-semibold text-neutral-800">Headline</h2>
-          <p class="text-neutral-500 mt-1">supporting text</p>
-        </div>
-        <button class="self-start mt-2 px-4 py-2 rounded-full bg-violet-600 hover:bg-violet-700 text-white text-sm font-medium">
-          <span class="material-icons text-base mr-1">file_download</span>
-          Download
-        </button>
       </div>
     </div>
 
-    <!-- Descrição -->
-    <p class="text-sm text-neutral-700 mb-6 leading-relaxed">
+    <!-- Descrição 
+    <p class="text-sm w-64 text-neutral-700 mb-6 leading-relaxed">
       A manipulação de pessoas mentalmente frágeis, ingênuas ou pouco críticas ocorre quando alguém explora suas limitações emocionais ou intelectuais para influenciar decisões e comportamentos. Embora eticamente questionável, há situações em que esse processo se torna, de certo modo, uma ferramenta para que o próprio indivíduo enfrente as consequências de seus erros. Quando a consciência falha, a influência externa, mesmo forçada, acaba servindo como um meio indireto de correção e aprendizado.
     </p>
-
+-->
     <!-- Botão que abre a DIV fullscreen 1 -->
     <div id="openSection1" class="flex items-center justify-between mb-4 cursor-pointer">
-      <h3 class="text-base font-medium text-neutral-800">(01)</h3>
+     
       <button class="p-1 text-neutral-500 hover:text-neutral-700 rounded-full">
-        <span class="material-icons text-lg">chevron_right</span>
+        
       </button>
     </div>
 
     <!-- Lista de Itens 1 -->
-    <div class="space-y-3">
-      <div class="bg-white rounded-xl shadow-sm p-3 flex gap-3 items-center">
-        <div class="w-14 h-14 bg-neutral-200 rounded-lg flex items-center justify-center">
-          <span class="material-icons text-neutral-400 text-3xl">image</span>
-        </div>
-        <div class="flex-1">
-          <h4 class="text-sm font-medium text-neutral-800">Mie (Emily)</h4>
-          <p class="text-xs text-neutral-500 mt-1">a mais rodada do neighbords</p>
-          <div class="flex items-center text-xs text-neutral-400 mt-1">
-            <span class="material-icons text-xs mr-1">add</span>
-            <span>Nota 6.5</span>
-          </div>
-        </div>
-        <button class="p-2 text-neutral-500 hover:text-neutral-700 rounded-full">
-          <span class="material-icons text-lg">play_arrow</span>
-        </button>
+<div class="space-y-0 w-64 flex flex-col items-center">
+  <div id="card1" class="cursor-pointer bg-white p-3 flex gap-3 items-center w-full max-w-md hover:shadow-md transition">
+    <div class="w-14 h-14 bg-neutral-200 rounded-lg flex items-center justify-center">
+      <span class="material-icons text-neutral-400 text-3xl">image</span>
+    </div>
+    <div class="flex-1">
+      <h4 class="text-sm font-medium text-neutral-800">EMILY (MIE, EMI, EMIZYH)</h4>
+      <div class="flex items-center text-xs text-neutral-400 mt-1">
+        <span class="material-icons text-xs mr-1">add</span>
+        <span>Nota 6.5</span>
       </div>
     </div>
+  </div>
+</div>
+
 
     <!-- Botão que abre a DIV fullscreen 2 -->
-    <div id="openSection2" class="flex items-center justify-between mb-4 cursor-pointer">
-      <h3 class="text-base font-medium text-neutral-800">(02)</h3>
-      <button class="p-1 text-neutral-500 hover:text-neutral-700 rounded-full">
-        <span class="material-icons text-lg">chevron_right</span>
-      </button>
-    </div>
+   
 
     <!-- Lista de Itens 2 -->
-    <div class="space-y-3">
-      <div class="bg-white rounded-xl shadow-sm p-3 flex gap-3 items-center">
-        <div class="w-14 h-14 bg-neutral-200 rounded-lg flex items-center justify-center">
-          <span class="material-icons text-neutral-400 text-3xl">image</span>
-        </div>
-        <div class="flex-1">
-          <h4 class="text-sm font-medium text-neutral-800">Aika (Maria Maysa)</h4>
-          <p class="text-xs text-neutral-500 mt-1">orgulho de ser puta</p>
-          <div class="flex items-center text-xs text-neutral-400 mt-1">
-            <span class="material-icons text-xs mr-1">add</span>
-            <span>Nota 3.0</span>
-          </div>
-        </div>
-        <button class="p-2 text-neutral-500 hover:text-neutral-700 rounded-full">
-          <span class="material-icons text-lg">play_arrow</span>
-        </button>
+<div class="space-y-0 w-64 flex flex-col items-center">
+  <div id="card2" class="cursor-pointer bg-white p-3 flex gap-3 items-center w-full max-w-md hover:shadow-md transition">
+    <div class="w-14 h-14 bg-neutral-200 rounded-lg flex items-center justify-center">
+      <span class="material-icons text-neutral-400 text-3xl">image</span>
+    </div>
+    <div class="flex-1">
+      <h4 class="text-sm font-medium text-neutral-800">MARIA MAYSA (AIKA)</h4>
+      <div class="flex items-center text-xs text-neutral-400 mt-1">
+        <span class="material-icons text-xs mr-1">add</span>
+        <span>Nota 3.0</span>
       </div>
     </div>
+  </div>
+</div>
+
+
+
+
+    <!-- Lista de Itens 3 -->
+<div class="space-y-0 w-64 flex flex-col items-center">
+  <div id="card3" class="cursor-pointer bg-white p-3 flex gap-3 items-center w-full max-w-md hover:shadow-md transition">
+    <div class="w-14 h-14 bg-neutral-200 rounded-lg flex items-center justify-center">
+      <span class="material-icons text-neutral-400 text-3xl">image</span>
+    </div>
+    <div class="flex-1">
+      <h4 class="text-sm font-medium text-neutral-800">LETÍCIA (LETTY)</h4>
+      <div class="flex items-center text-xs text-neutral-400 mt-1">
+        <span class="material-icons text-xs mr-1">add</span>
+        <span>Nota 5.7</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+    <!-- Lista de Itens 4 -->
+<div class="space-y-0 w-64 flex flex-col items-center">
+  <div id="card4" class="cursor-pointer bg-white p-3 flex gap-3 items-center w-full max-w-md hover:shadow-md transition">
+    <div class="w-14 h-14 bg-neutral-200 rounded-lg flex items-center justify-center">
+      <span class="material-icons text-neutral-400 text-3xl">image</span>
+    </div>
+    <div class="flex-1">
+      <h4 class="text-sm font-medium text-neutral-800">LARISSA NICOLE (NINI)</h4>
+      <div class="flex items-center text-xs text-neutral-400 mt-1">
+        <span class="material-icons text-xs mr-1">add</span>
+        <span>Nota 7.3</span>
+      </div>
+    </div>
+  </div>
+</div>
+
 
   </main>
 
   <!-- ====================
-       DIV FULLSCREEN 01
-       ==================== -->
-  <div id="divFullscreen1" class="fixed inset-0 bg-white z-50 hidden flex flex-col p-6 overflow-auto">
+     DIV FULLSCREEN 01
+     ==================== -->
+<div id="divFullscreen1" class="fixed inset-0 bg-black  z-50 hidden flex flex-col items-center p-6 overflow-auto text-white">
+  <div class="w-full max-w-5xl space-y-6">
+
+    <!-- Botão de Voltar -->
     <div class="flex items-center mb-4">
-      <button id="closeSection1" class="p-2 text-neutral-600 hover:bg-neutral-100 rounded-full">
+      <button id="closeSection1" class="p-2 text-white hover:bg-neutral-800 rounded-full">
         <span class="material-icons">arrow_back</span>
       </button>
     </div>
 
-    <img src="midia/mie02.webp" alt="">
+    <!-- Imagem de Capa centralizada -->
+    <img class="w-full max-w-sm md:max-w-md lg:max-w-lg mx-auto rounded-lg" src="midia/mie02.webp" alt="Imagem de Mie">
 
-    <div class="space-y-3">
-      <div class="bg-white rounded-xl shadow-sm p-3">
-        <video class="w-full rounded-lg" src="midia/mie1.mp4" loop controls></video>
+    <!-- Grid de vídeos e imagem -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- Vídeo 1 -->
+      <div class=" rounded-xl shadow-sm p-3">
+        <video class="w-full max-w-sm md:max-w-md lg:max-w-sm xl:max-w-xs mx-auto" src="midia/mie1.mp4" loop controls></video>
         <p class="text-xs text-neutral-500 mt-2">26s</p>
       </div>
-      <div class="bg-white rounded-xl shadow-sm p-3">
-        <video class="w-full rounded-lg" src="midia/mie04.mp4" loop controls></video>
+
+      <!-- Vídeo 2 -->
+      <div class="b rounded-xl shadow-sm p-3">
+        <video class="w-full max-w-sm md:max-w-md lg:max-w-sm xl:max-w-xs mx-auto" src="midia/mie04.mp4" loop controls></video>
         <p class="text-xs text-neutral-500 mt-2">8m 29s</p>
       </div>
-      <div class="bg-white rounded-xl shadow-sm p-3">
-        <video class="w-full rounded-lg" src="midia/mie05.mp4" loop controls></video>
+
+      <!-- Vídeo 3 -->
+      <div class=" rounded-xl shadow-sm p-3">
+        <video class="w-full max-w-sm md:max-w-md lg:max-w-sm xl:max-w-xs mx-auto" src="midia/mie05.mp4" loop controls></video>
         <p class="text-xs text-neutral-500 mt-2">3m 45s</p>
       </div>
-    </div>
-  </div>
 
-  <!-- ====================
-       DIV FULLSCREEN 02
-       ==================== -->
-  <div id="divFullscreen2" class="fixed inset-0 bg-white z-50 hidden flex flex-col p-6 overflow-auto">
+      <!-- Imagem final -->
+      <div class=" rounded-xl shadow-sm p-3">
+        <img class="w-full max-w-sm md:max-w-md lg:max-w-sm xl:max-w-xs mx-auto" src="midia/mie3.jpg" alt="Imagem final">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ====================
+     DIV FULLSCREEN 02
+     ==================== -->
+<div id="divFullscreen2" class="fixed inset-0 bg-black z-50 hidden flex flex-col items-center p-6 overflow-auto text-white">
+  <div class="w-full max-w-5xl space-y-6">
+
+    <!-- Botão de Voltar -->
     <div class="flex items-center mb-4">
-      <button id="closeSection2" class="p-2 text-neutral-600 hover:bg-neutral-100 rounded-full">
+      <button id="closeSection2" class="p-2 text-white hover:bg-neutral-800 rounded-full">
         <span class="material-icons">arrow_back</span>
       </button>
     </div>
-    <p></p>
+
+    <!-- Imagem de Capa centralizada -->
+   
+
+    <!-- Grid de vídeos e imagem -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- Vídeo 1 -->
+      <div class="rounded-xl shadow-sm p-3">
+        <video class="w-full max-w-sm md:max-w-md lg:max-w-sm xl:max-w-xs mx-auto" src="midia/aika01.mp4" loop controls></video>
+        <p class="text-xs text-neutral-500 mt-2">11m 18s</p>
+      </div>
+
+      <!-- Vídeo 2 -->
+      <div class="rounded-xl shadow-sm p-3">
+        <video class="w-full max-w-sm md:max-w-md lg:max-w-sm xl:max-w-xs mx-auto" src="midia/aika02.mp4" loop controls></video>
+        <p class="text-xs text-neutral-500 mt-2">1m 12s</p>
+      </div>
+
+      <!-- Vídeo 3 -->
+      <div class="rounded-xl shadow-sm p-3">
+        <video class="w-full max-w-sm md:max-w-md lg:max-w-sm xl:max-w-xs mx-auto" src="midia/aika03.mp4" loop controls></video>
+        <p class="text-xs text-neutral-500 mt-2">1m 32s</p>
+      </div>
+
+      <!-- Imagem final -->
+      <div class="rounded-xl shadow-sm p-3">
+        <img class="w-full max-w-sm md:max-w-md lg:max-w-sm xl:max-w-xs mx-auto" src="midia/aika04.jpg" alt="Imagem final">
+        <br>
+          <img class="w-full max-w-sm md:max-w-md lg:max-w-sm xl:max-w-xs mx-auto" src="midia/aika05.jpg" alt="Imagem final">
+      </div>
+      
+    </div>
+
   </div>
+</div>
 
-  <!-- ====================
-       FOOTER
-       ==================== -->
-  <footer class="fixed bottom-0 left-0 right-0 border-t bg-white p-3 flex items-center">
-    <div class="w-10 h-10 bg-neutral-200 rounded-lg flex items-center justify-center mr-3">
-      <img class="rounded-lg" src="img/capa.png" alt="">
+<!-- ====================
+     DIV FULLSCREEN 03 (LETÍCIA)
+==================== -->
+<div id="divFullscreen3" class="fixed inset-0 bg-black z-50 hidden flex flex-col items-center p-6 overflow-auto text-white">
+  <!-- Conteúdo da Letícia -->
+  <div class="w-full max-w-5xl space-y-6">
+    <div class="flex items-center mb-4">
+      <button id="closeSection3" class="p-2 text-white hover:bg-neutral-800 rounded-full">
+        <span class="material-icons">arrow_back</span>
+      </button>
     </div>
-    <div class="flex-1">
-      <p class="text-sm text-neutral-800 leading-tight">бывает больно</p>
-      <p class="text-xs text-neutral-500">kurokov</p>
+    <!-- Adicione imagem e vídeos aqui -->
+  </div>
+</div>
+
+
+<!-- ====================
+     DIV FULLSCREEN 04 (LARISSA)
+     ==================== -->
+
+   
+<div id="divFullscreen4" class="fixed inset-0 bg-black z-50 hidden flex flex-col items-center p-6 overflow-auto text-white">
+  <!-- Conteúdo da Letícia -->
+  <div class="w-full max-w-5xl space-y-6">
+    <div class="flex items-center mb-4">
+      <button id="closeSection3" class="p-2 text-white hover:bg-neutral-800 rounded-full">
+        <span class="material-icons">arrow_back</span>
+      </button>
     </div>
-    <button id="playBtn" class="p-2 text-neutral-500 hover:text-neutral-700 rounded-full">
-      <span class="material-icons text-lg">play_arrow</span>
-    </button>
-  </footer>
+    <!-- Adicione imagem e vídeos aqui -->
+  </div>
+</div>
 
-  <!-- ====================
-       ÁUDIO
-       ==================== -->
-  <audio id="audioPlayer" src="img/Бывает больно.mp3"></audio>
 
-  <!-- ====================
-       SCRIPT
-       ==================== -->
+
   <script>
-    function salvo() {
-      const mensagem = document.getElementById('mensagemSalvo');
-      mensagem.classList.remove('hidden');
-      setTimeout(() => {
-        mensagem.classList.add('hidden');
-      }, 1000);
-    }
+  document.addEventListener('DOMContentLoaded', () => {
+    // Abrir fullscreen para cada card
+    const cards = [1, 2, 3, 4];
+    cards.forEach((num) => {
+      const card = document.getElementById(`card${num}`);
+      const fullscreenDiv = document.getElementById(`divFullscreen${num}`);
+      const openBtn = document.getElementById(`openSection${num}`);
+      const closeBtn = document.getElementById(`closeSection${num}`);
 
-    // Fullscreen Section 1
-    const openBtn1 = document.getElementById('openSection1');
-    const closeBtn1 = document.getElementById('closeSection1');
-    const fullscreenDiv1 = document.getElementById('divFullscreen1');
+      if (card && fullscreenDiv) {
+        card.addEventListener('click', () => {
+          fullscreenDiv.classList.remove('hidden');
+        });
+      }
 
-    openBtn1.addEventListener('click', () => fullscreenDiv1.classList.remove('hidden'));
-    closeBtn1.addEventListener('click', () => fullscreenDiv1.classList.add('hidden'));
+      if (openBtn && fullscreenDiv) {
+        openBtn.addEventListener('click', () => {
+          fullscreenDiv.classList.remove('hidden');
+        });
+      }
 
-    // Fullscreen Section 2
-    const openBtn2 = document.getElementById('openSection2');
-    const closeBtn2 = document.getElementById('closeSection2');
-    const fullscreenDiv2 = document.getElementById('divFullscreen2');
+      if (closeBtn && fullscreenDiv) {
+        closeBtn.addEventListener('click', () => {
+          fullscreenDiv.classList.add('hidden');
+        });
+      }
+    });
 
-    openBtn2.addEventListener('click', () => fullscreenDiv2.classList.remove('hidden'));
-    closeBtn2.addEventListener('click', () => fullscreenDiv2.classList.add('hidden'));
+    // Mensagem de "salvo"
+    const mensagem = document.getElementById('mensagemSalvo');
+    window.salvo = function () {
+      if (mensagem) {
+        mensagem.classList.remove('hidden');
+        setTimeout(() => {
+          mensagem.classList.add('hidden');
+        }, 1000);
+      }
+    };
 
     // Áudio Player
     const audio = document.getElementById('audioPlayer');
     const playBtn = document.getElementById('playBtn');
     let isPlaying = false;
 
-    playBtn.addEventListener('click', () => {
-      if (!isPlaying) {
-        audio.play();
-        isPlaying = true;
-        playBtn.innerHTML = '<span class="material-icons text-lg">pause</span>';
-      } else {
-        audio.pause();
+    if (audio && playBtn) {
+      playBtn.addEventListener('click', () => {
+        if (!isPlaying) {
+          audio.play();
+          isPlaying = true;
+          playBtn.innerHTML = '<span class="material-icons text-lg">pause</span>';
+        } else {
+          audio.pause();
+          isPlaying = false;
+          playBtn.innerHTML = '<span class="material-icons text-lg">play_arrow</span>';
+        }
+      });
+
+      audio.addEventListener('ended', () => {
         isPlaying = false;
         playBtn.innerHTML = '<span class="material-icons text-lg">play_arrow</span>';
-      }
-    });
-
-    audio.addEventListener('ended', () => {
-      isPlaying = false;
-      playBtn.innerHTML = '<span class="material-icons text-lg">play_arrow</span>';
-    });
-  </script>
+      });
+    }
+  });
+</script>
 
 </body>
 </html>
