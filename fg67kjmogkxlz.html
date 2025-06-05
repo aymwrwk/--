@@ -110,18 +110,18 @@
     </div>
     <br>
 <!-- Lista de Itens 1 -->
-<div class="  pace-y-0  w-64 mx-auto md:mx-0">
-  <div id="card1" class="card-bg dark:bg-neutral-900 rounded-sm cursor-pointer bg-white p-8 flex gap-5 items-center w-full max-w-md hover:shadow-md transition">
-  
-    <div class="flex-1">
-      <h4 class=" text-sm font-medium text-neutral-800 text-center mt-5">EMILY (MIE, <br> EMI, EMIZYH)</h4>
-    <div class="flex items-center text-xs text-neutral-400 mt-1 justify-center">
-        <span class="material-icons text-xs mr-1">add</span>
-        <span>Nota 6.5</span>
+
+  <div class="  pace-y-0  w-64 mx-auto md:mx-0">
+    <div id="card1" class="card-bg dark:bg-neutral-900 rounded-sm cursor-pointer bg-white p-8 flex gap-5 items-center w-full max-w-md hover:shadow-md transition">
+      <div class="flex-1">
+        <h4 class=" text-sm font-medium text-neutral-800 text-center mt-5">EMILY (MIE, <br> EMI, EMIZYH)</h4>
+      <div class="flex items-center text-xs text-neutral-400 mt-1 justify-center">
+          <span class="material-icons text-xs mr-1">add</span>
+          <span>Nota 6.5</span>
+        </div>
       </div>
     </div>
   </div>
-</div>
 <br>
     <!-- Lista de Itens 2 -->
 <div class="space-y-0 w-64 mx-auto md:mx-0">
@@ -165,30 +165,29 @@
   </div>
 </div>
 
-
-  <!-- ====================
+<!-- ====================
      DIV CONTEÚDO
      ==================== -->
 
 <div class="mt-10 md:absolute md:top-1/2 md:right-10 md:transform md:-translate-y-1/2 md:w-96 w-full px-24">
-  <div class="card-bg02  dark:bg-neutral-900 bg-white rounded-xl p-6 space-y-4">
+  <div class="card-bg02 dark:bg-neutral-900 bg-white rounded-xl p-6 space-y-4 relative">
     <h2 class="text-2xl font-bold text-neutral-800 dark:text-white text-center mb-4">******</h2>
 
-
-    <a href="https://discord.gg/seuconvite" target="_blank" class="white:border border-black bg-discord flex items-center gap-3 p-3 rounded-lg hover:bg-neutral-100 dark:hover:bg-blue-700 transition">
-      <span class="material-icons text-indigo-500"><img src="img/discord-icon-png.png" class="rounded-full" alt=""></span>
+    <!-- Botão do Discord -->
+    <button id="discordBtn" class="white:border border-black bg-discord flex items-center gap-3 p-3 rounded-lg hover:bg-neutral-100 dark:hover:bg-blue-700 transition w-full relative">
+      <span class="material-icons text-indigo-500">
+        <img src="img/discord-icon-png.png" class="rounded-full w-6 h-6" alt="Discord">
+      </span>
       <div>
-        <p class="text-sm font-semibold text-neutral-800 dark:text-white mr-6">Discord</p>
-     
+        <p class="text-sm font-semibold text-neutral-800 dark:text-white mr-6"><a href="https://discord.com/channels/@me">Discord</a></p>
       </div>
-    </a>
+    </button>
 
-   
   </div>
 </div>
 
   </main>
-
+  
   <!-- ====================
      DIV FULLSCREEN 01
      ==================== -->
@@ -262,6 +261,14 @@
 
     <!-- Imagem de Capa centralizada -->
    
+    <div class="text-center">
+      <p>MARIA MAYSA DE SOUZA ARAÚJO</p>
+     
+      <p>87 98136-0030</p>
+
+      <p>MAE: MARCIENE FEITOZA ARAÚJO</p>
+      <a href="https://www.instagram.com/marcienefeitoza061/" class="text-red-600 underline font-medium">INSTAGRAM DA MAE</a>
+    </div>
 
     <!-- Grid de vídeos e imagem -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -316,7 +323,13 @@
     <span class="material-icons">arrow_back</span>
   </button>
 </div>
-    <!-- Adicione imagem e vídeos aqui -->
+     <div class="rounded-xl shadow-sm p-3">
+        <video class="w-full max-w-sm md:max-w-md lg:max-w-sm xl:max-w-xs mx-auto"
+         src="nicole/leticia01.mp4"
+         poster=""
+         controls></video>
+    
+      </div>
   </div>
 </div>
 
@@ -342,6 +355,7 @@
       <div class="rounded-xl shadow-sm p-3">
         <video class="w-full max-w-sm md:max-w-md lg:max-w-sm xl:max-w-xs mx-auto"
          src="nicole/01nicole.MP4"
+         poster="nicole/thumbnicole01.webp"
          loop controls></video>
     
       </div>
@@ -371,6 +385,47 @@
     </div>
   </div>
 </div>
+
+<script>
+  // Seleciona todos os botões de fechar
+  document.querySelectorAll('.closeFullscreen').forEach(button => {
+    button.addEventListener('click', () => {
+      const fullscreenDiv = button.closest('div');
+
+      if (fullscreenDiv) {
+        // Pausa todos os vídeos dentro da div fullscreen correspondente
+        const videos = fullscreenDiv.querySelectorAll('video');
+        videos.forEach(video => {
+          video.pause();
+          video.currentTime = 0; // (Opcional) reinicia o vídeo
+        });
+
+        // Esconde a div fullscreen
+        fullscreenDiv.classList.add('hidden');
+      }
+    });
+  });
+</script>
+
+
+
+<script>
+  const discordBtn = document.getElementById('discordBtn');
+  const customAlert = document.getElementById('customAlert');
+
+  discordBtn.addEventListener('click', (e) => {
+    e.preventDefault(); // Evita redirecionamento
+    customAlert.classList.remove('hidden');
+    customAlert.classList.remove('opacity-0');
+    customAlert.classList.add('opacity-100');
+
+    setTimeout(() => {
+      customAlert.classList.remove('opacity-100');
+      customAlert.classList.add('opacity-0');
+      setTimeout(() => customAlert.classList.add('hidden'), 300);
+    }, 2500);
+  });
+</script>
 
   <script>
 
