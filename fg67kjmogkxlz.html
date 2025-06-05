@@ -28,11 +28,33 @@
     background-image: url('./img/cardbgwhite.jpg');
   }
 
+   .card-bg02 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('./img/bgwhite.jpg'); /* claro */
+    
+ 
+  }
+
+  .dark .card-bg02 {
+    background-image: url('./img/ahha.jpg'); /* escuro */
+  }
+
   /* Fundo para modo escuro */
   .dark .card-bg {
     background-image: url('./img/card02.jpg');
   }
 
+  .span01{
+    padding: 1px;
+    background-color: white;
+  }
+
+
+  .bg-discord{
+   background-color: #8C9EFF;
+  }
 
   </style>
 
@@ -142,6 +164,29 @@
     </div>
   </div>
 </div>
+
+
+  <!-- ====================
+     DIV CONTEÚDO
+     ==================== -->
+
+<div class="mt-10 md:absolute md:top-1/2 md:right-10 md:transform md:-translate-y-1/2 md:w-96 w-full px-24">
+  <div class="card-bg02  dark:bg-neutral-900 bg-white rounded-xl p-6 space-y-4">
+    <h2 class="text-2xl font-bold text-neutral-800 dark:text-white text-center mb-4">******</h2>
+
+
+    <a href="https://discord.gg/seuconvite" target="_blank" class="white:border border-black bg-discord flex items-center gap-3 p-3 rounded-lg hover:bg-neutral-100 dark:hover:bg-blue-700 transition">
+      <span class="material-icons text-indigo-500"><img src="img/discord-icon-png.png" class="rounded-full" alt=""></span>
+      <div>
+        <p class="text-sm font-semibold text-neutral-800 dark:text-white mr-6">Discord</p>
+     
+      </div>
+    </a>
+
+   
+  </div>
+</div>
+
   </main>
 
   <!-- ====================
@@ -223,19 +268,28 @@
 
       <!-- Vídeo 1 -->
       <div class="rounded-xl shadow-sm p-3">
-        <video class="w-full max-w-sm md:max-w-md lg:max-w-sm xl:max-w-xs mx-auto" src="midia/aika01.mp4" loop controls></video>
+        <video class="w-full max-w-sm md:max-w-md lg:max-w-sm xl:max-w-xs mx-auto"
+         src="midia/aika01.mp4" 
+         poster="midia/aikathumb01.webp"
+         loop controls></video>
         <p class="text-xs text-neutral-500 mt-2">11m 18s</p>
       </div>
 
       <!-- Vídeo 2 -->
       <div class="rounded-xl shadow-sm p-3">
-        <video class="w-full max-w-sm md:max-w-md lg:max-w-sm xl:max-w-xs mx-auto" src="midia/aika02.mp4" loop controls></video>
+        <video class="w-full max-w-sm md:max-w-md lg:max-w-sm xl:max-w-xs mx-auto"
+         src="midia/aika02.mp4"
+          poster="midia/aikathumb02.webp"
+          loop controls></video>
         <p class="text-xs text-neutral-500 mt-2">1m 12s</p>
       </div>
 
       <!-- Vídeo 3 -->
       <div class="rounded-xl shadow-sm p-3">
-        <video class="w-full max-w-sm md:max-w-md lg:max-w-sm xl:max-w-xs mx-auto" src="midia/aika03.mp4" loop controls></video>
+        <video class="w-full max-w-sm md:max-w-md lg:max-w-sm xl:max-w-xs mx-auto" 
+        src="midia/aika03.mp4" 
+         poster="midia/aikathumb03.webp"
+        loop controls></video>
         <p class="text-xs text-neutral-500 mt-2">1m 32s</p>
       </div>
 
@@ -268,24 +322,55 @@
 
 
 <!-- ====================
-     DIV FULLSCREEN 04 (LARISSA)
+     DIV FULLSCREEN 04 (NICOLE)
      ==================== -->
 
-   
 <div id="divFullscreen4" class="fixed inset-0 bg-black z-50 hidden flex flex-col items-center p-6 overflow-auto text-white">
-  <!-- Conteúdo da Letícia -->
   <div class="w-full max-w-5xl space-y-6">
-    <div class="flex items-center mb-4">
-   <div class="sticky top-0 z-50 p-2 flex items-start">
-  <button id="closeSection4" class="p-2 text-white hover:bg-neutral-800 rounded-full">
-    <span class="material-icons">arrow_back</span>
-  </button>
-</div>
-    <!-- Adicione imagem e vídeos aqui -->
+
+    <!-- Botão de Voltar -->
+    <div class="sticky top-0 z-50 p-2 flex items-start">
+      <button id="closeSection4" class="p-2 text-white hover:bg-neutral-800 rounded-full">
+        <span class="material-icons">arrow_back</span>
+      </button>
+    </div>
+
+    <!-- Grid de vídeos e imagens -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <!-- Vídeo 1 -->
+      <div class="rounded-xl shadow-sm p-3">
+        <video class="w-full max-w-sm md:max-w-md lg:max-w-sm xl:max-w-xs mx-auto"
+         src="nicole/01nicole.MP4"
+         loop controls></video>
+    
+      </div>
+
+      <!-- Imagem 1 e 2 -->
+      <div class="rounded-xl shadow-sm p-3 space-y-4">
+        <img class="w-full max-w-sm md:max-w-md lg:max-w-sm xl:max-w-xs mx-auto"
+         src="nicole/02nicole.JPEG" alt="Imagem Nicole 2">
+       
+      </div>
+
+      <!-- Imagem Final -->
+      <div class="rounded-xl shadow-sm p-3">
+        <img class="w-full max-w-sm md:max-w-md lg:max-w-sm xl:max-w-xs mx-auto"
+         src="nicole/03nicole.JPEG" alt="Imagem Final">
+      </div>
+
+      <!-- Vídeo 2 (exemplo) -->
+      <div class="rounded-xl shadow-sm p-3">
+        <img class="w-full max-w-sm md:max-w-md lg:max-w-sm xl:max-w-xs mx-auto"
+         src="nicole/04nicole.JPEG"
+         poster=""
+         loop controls></video>
+        
+      </div>
+
+    </div>
   </div>
 </div>
-
-
 
   <script>
 
