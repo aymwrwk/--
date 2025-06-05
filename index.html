@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login</title>
+  <title>ㅤ</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .form-wrapper {
@@ -52,7 +52,7 @@
                bg-white/0 backdrop-blur-md placeholder-white"
       />
 
-      <!-- Mensagem de erro (inicialmente oculta) -->
+      
       <div id="mensagemErro" class="hidden bg-red-500/80 text-white text-sm  p-2 px-3 flex items-center gap-2 animate-pulse">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-white" viewBox="0 0 24 24">
           <path d="M1 21h22L12 2 1 21zm13-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
@@ -61,7 +61,7 @@
       </div>
 
       <div class="flex justify-center items-center">
-        <button type="submit" class="w-16 text-black font-medium p-5 rounded-full hover:bg-white/40 transition">
+        <button type="submit" class="w-16 text-black font-medium p-5 rounded-full hover:bg-red-500 transition">
           <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff">
             <path d="M480-120v-80h280v-560H480v-80h280q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H480Zm-80-160-55-58 102-102H120v-80h327L345-622l55-58 200 200-200 200Z"/>
           </svg>
@@ -75,7 +75,7 @@
       e.preventDefault();
 
       const senhaDigitada = document.getElementById("senha").value;
-      const senhaCorreta = atob("MzM="); // "33"
+      const senhaCorreta = atob("MzM=");
 
       const mensagemErro = document.getElementById("mensagemErro");
 
